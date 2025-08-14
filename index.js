@@ -94,26 +94,50 @@ console.log(CemberinAlani(15,pi))
 */
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
+console.log(sayilar.length)
 
-let ucetambolunenler,
-  enkucuk,
-  enbuyuk,
-  ucebolunenlerintoplami,
-  besyuzdenkucuksayilar,
-  siralisayilar,
-  tekraredensayilar;
+let ucetambolunenler;
+let enkucuk;
+let enbuyuk;
+let ucebolunenlerintoplami;
+let besyuzdenkucuksayilar;
+let siralisayilar;
+let tekraredensayilar;
 
 // 3a çözümü
 
-/* kodlar buraya */
+enkucuk = sayilar[0];
+enbuyuk = sayilar[0];
+
+for (let i = 1; i < sayilar.length; i++) {
+  if (sayilar[i] < enkucuk) {
+    enkucuk = sayilar[i]
+  } else if (sayilar[i] > enbuyuk) {
+    enbuyuk = sayilar[i]
+  }
+}
+
+console.log(enkucuk)
+console.log(enbuyuk)
 
 // 3b çözümü:
 
-/* kodlar buraya */
+ucetambolunenler =[];
+
+sayilar.forEach((sayi) => {
+  if (sayi % 3 === 0) { 
+    ucetambolunenler.push(sayi)
+  }
+  return ucetambolunenler
+  })
+
+console.log(ucetambolunenler)
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce((ilk,eleman) => eleman+ilk,0)
+
+console.log(ucebolunenlerintoplami)
 
 // 3d çözümü
 
