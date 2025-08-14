@@ -141,15 +141,33 @@ console.log(ucebolunenlerintoplami)
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
+console.log(besyuzdenkucuksayilar)
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = besyuzdenkucuksayilar.sort((a,b) => a-b)
+console.log(siralisayilar)
 
 // 3f çözümü
 
-/* kodlar buraya */
+tekraredensayilar = [];
+let tekrar;
+for (let i = 0; i < sayilar.length; i++) {
+  tekrar = 1;
+  for (let j = i + 1; j < sayilar.length; j++) {
+    
+    if (sayilar[i] === sayilar[j]) {
+      tekrar = tekrar+1;
+    }
+  }
+
+  if (tekrar > 1) {
+    tekraredensayilar.push(`${sayilar[i]} sayısı ${tekrar} kere tekrar edilmiştir`)
+  }
+}
+
+console.log(tekraredensayilar)
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
